@@ -56,21 +56,21 @@ export default function OrderScreen() {
             <Header></Header>
             <main>
                 <form className={classes.form}>
-                    <h2>Сумма заказа составляет {price} с.</h2>
+                    <h2>The total amount of the order is {price} с.</h2>
                     <label>
-                        ФИО
+                        Name
                         <input ref={nameRef} type="text" />
                     </label>
                     <label>
-                        Номер телефона
+                        Phone Number
                         <input ref={phoneRef} type="phone" />
                     </label>
                     <label>
-                        Адрес доставки
+                        Delivery Address
                         <input ref={addressRef} type="text" />
                     </label>
                     <label>
-                        Описание
+                        {"Description (optional)"}
                         <textarea
                             ref={descriptionRef}
                             className={classes.textarea}
