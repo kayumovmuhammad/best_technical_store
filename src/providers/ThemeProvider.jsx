@@ -22,8 +22,8 @@ export default function ThemeProvider({ children }) {
     }, [theme]);
 
     return (
-        <ThemeContext value={[theme, toggleTheme]}>
+        <ThemeContext.Provider value={[theme, toggleTheme]}>
             {children}
-        </ThemeContext>
+        </ThemeContext.Provider>
     );
 }

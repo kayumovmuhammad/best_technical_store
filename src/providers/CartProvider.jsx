@@ -9,7 +9,7 @@ export default function CartProvider({ children }) {
 
     useEffect(() => {
         localStorage.setItem("items", JSON.stringify(items));
-    }, [JSON.stringify(items)]);
+    }, [items]);
 
     function addToCart(product) {
         setItems((prev) => {
@@ -27,7 +27,10 @@ export default function CartProvider({ children }) {
         setItems((prev) => {
             const newItems = { ...prev };
 
-            newItems[id].count--;
+            newItems[id] = {
+                ...newItems[id],
+                count: newItems[id].count - 1,
+            };
             if (newItems[id].count == 0) {
                 delete newItems[id];
             }
@@ -40,8 +43,10 @@ export default function CartProvider({ children }) {
         setItems((prev) => {
             const newItems = { ...prev };
 
-            newItems[id].count++;
-            console.log("hello");
+            newItems[id] = {
+                ...newItems[id],
+                count: newItems[id].count + 1,
+            };
 
             return newItems;
         });
@@ -52,10 +57,16 @@ export default function CartProvider({ children }) {
     }
 
     return (
-        <CartContext
-            value={{ items, addToCart, addOneToCart, deleteOneFromCart, clearCart }}
+        <CartContext.Provider
+            value={{
+                items,
+                addToCart,
+                addOneToCart,
+                deleteOneFromCart,
+                clearCart,
+            }}
         >
             {children}
-        </CartContext>
+        </CartContext.Provider>
     );
 }
