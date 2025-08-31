@@ -1,0 +1,48 @@
+.img {
+    width: 50px;
+    height: 50px;
+}
+.img:hover {
+    cursor: pointer;
+}
+.product_card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.button, .big_button {
+    background-color: rgba(var(--dark-color), 0.1);
+    width: 20px;
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.button:hover, .big_button:hover {
+    background-color: rgba(var(--dark-color), 0.2);
+    cursor: pointer;
+}
+
+.count {
+    display: flex;
+    gap: 5px;
+}
+
+.img_name {
+    display: flex; 
+    gap: 10px;
+}
+
+.big_button {
+    width: 100%;
+    padding: 3px;
+}
+
+.flex_cart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

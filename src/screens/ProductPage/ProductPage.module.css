@@ -1,0 +1,18 @@
+.img {
+    width: 250px;
+    height: 250px;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: auto;
+    align-items: center;
+}

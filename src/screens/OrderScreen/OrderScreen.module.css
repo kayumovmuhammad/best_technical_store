@@ -1,0 +1,30 @@
+.textarea {
+    resize: none;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    width: 400px;
+
+    padding: 3px 5px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(var(--dark-color), 0.5);
+}
+.textarea:focus,
+.textarea:focus-visible,
+.textarea:focus-within {
+    outline: none;
+    border-color: rgba(var(--dark-color), 0.7);
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form>label {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}

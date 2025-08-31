@@ -1,0 +1,71 @@
+html {
+    --light-color: 255, 255, 255;
+    --dark-color: 0, 0, 0;
+    --bg-color: white;
+    --bg-color-ops: black;
+    --text-color: black;
+    --text-color-ops: white;
+}
+html.dark {
+    --dark-color: 255, 255, 255;
+    --light-color: 0, 0, 0;
+    --bg-color: black;
+    --bg-color-ops: white;
+    --text-color: white;
+    --text-color-ops: black;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="phone"] {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 3px;
+    border: 1.5px solid rgba(var(--dark-color), 0.5);
+}
+input[type="text"]:focus,
+input[type="text"]:focus-visible,
+input[type="text"]:focus-within,
+input[type="phone"]:focus,
+input[type="phone"]:focus-visible,
+input[type="phone"]:focus-within {
+    outline: none;
+    border-color: rgba(var(--dark-color), 0.7);
+}
+
+main {
+    margin: 65px 15px 25px 15px;
+}
+
+.button {
+    background-color: rgba(var(--dark-color), 0.1);
+    color: var(--text-color);
+    border: none;   
+    text-align: center;
+    border-radius: 5px;
+    user-select: none;
+    width: min-content;
+    padding: 5px;
+    font-size: 15px;
+
+}
+.button:hover {
+    background-color: rgba(var(--dark-color), 0.2);
+    cursor: pointer;
+}

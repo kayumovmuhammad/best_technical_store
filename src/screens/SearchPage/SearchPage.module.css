@@ -1,0 +1,6 @@
+.main {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+
+    padding-bottom: 30px;
+}

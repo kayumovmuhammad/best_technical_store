@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--bg-color);
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav a {
+    color: var(--text-color);
+}
